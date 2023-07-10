@@ -14,6 +14,8 @@ app.use(cors())
 
 app.use('/posts', postRouter)
 
+app.use('/', (req, res) => res.send("Welcome To Memories API"))
+
 const PORT = process.env.PORT
 
 mongoose.connect(process.env.CONNECTION_URL)
