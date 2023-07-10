@@ -22,4 +22,4 @@ mongoose.connect(process.env.CONNECTION_URL)
     .then(app.listen(PORT, () => console.log(`Server is running on ${PORT}`)))
     .catch((error) => console.log(error.message))
 
-// app.listen(PORT, console.log(`Server is running on port ${PORT}`))
+module.exports = app
