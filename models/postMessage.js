@@ -5,10 +5,7 @@ const postSchema = mongoose.Schema({
     message: String,
     creator: String,
     date: String,
-    createdAt: {
-        type: Date,
-        default: new Date(),
-    }
+    createdAt: Date
 })
 
 const PostMessage = mongoose.model('PostMessage', postSchema)

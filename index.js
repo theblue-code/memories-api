@@ -16,10 +16,8 @@ app.use('/posts', postRouter)
 
 app.get('/', (req, res) => res.send("Welcome To Memories API"))
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT
 
 mongoose.connect(process.env.CONNECTION_URL)
     .then(app.listen(PORT, () => console.log(`Server is running on ${PORT}`)))
     .catch((error) => console.log(error.message))
-
-module.exports = app
