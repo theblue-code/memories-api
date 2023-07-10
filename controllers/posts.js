@@ -11,14 +11,6 @@ export const getPosts = async (req, res) => {
     }
 }
 
-// export const getPost = async (req, res) => {
-//     try {
-//         const post = 
-//     } catch (error) {
-        
-//     }
-// }
-
 export const createPost = async (req, res) => {
     const post = req.body
 
