@@ -14,9 +14,9 @@ app.use(cors())
 
 app.use('/posts', postRouter)
 
-app.use('/', (req, res) => res.send("Welcome To Memories API"))
+app.get('/', (req, res) => res.send("Welcome To Memories API"))
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 5000
 
 mongoose.connect(process.env.CONNECTION_URL)
     .then(app.listen(PORT, () => console.log(`Server is running on ${PORT}`)))
